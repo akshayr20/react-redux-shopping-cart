@@ -7,45 +7,50 @@
 		"build:watch": "webpack --watch",
 		"lint": "eslint .; exit 0",
 		"lint:fix": "eslint . --fix",
-		"serve": "webpack -p && live-server ./public",
+		"serve": "webpack -p && live-server ./dist",
 		"serve:dev": "webpack-dev-server --open",
 		"start": "npm run serve",
-		"test": "echo \"No tests available\" && exit 0"
+		"test": "echo \"No tests available\" && exit 0",
+		"build-dev": "webpack --mode development",
+		"build-prod": "webpack --mode production"
 	},
 	"license": "MIT",
-	"babel": {
-		"presets": [
-			"env",
-			"react"
-		]
-	},
 	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-core": "^6.26.0",
-		"babel-eslint": "^8.2.1",
-		"babel-loader": "^7.1.2",
-		"babel-preset-env": "^1.6.1",
-		"babel-preset-react": "^6.24.1",
-		"clean-webpack-plugin": "^0.1.18",
-		"css-loader": "^0.28.9",
-		"eslint": "^4.17.0",
-		"eslint-loader": "^1.9.0",
+		"@babel/core": "^7.5.5",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/plugin-syntax-class-properties": "^7.2.0",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"@babel/preset-typescript": "^7.3.3",
+		"clean-webpack-plugin": "^3.0.0",
+		"css-loader": "^3.2.0",
+		"eslint": "^6.1.0",
+		"eslint-loader": "^2.2.1",
 		"eslint-plugin-react": "^7.6.1",
-		"file-loader": "^1.1.5",
-		"html-webpack-plugin": "^2.30.1",
+		"file-loader": "^4.2.0",
+		"html-webpack-plugin": "^3.2.0",
 		"live-server": "^1.2.0",
 		"node-sass": "^4.12.0",
-		"sass-loader": "^6.0.6",
-		"style-loader": "^0.20.1",
-		"url-loader": "^0.6.2",
-		"webpack": "^3.8.1",
-		"webpack-dev-server": "^2.11.1"
+		"sass-loader": "^7.2.0",
+		"source-map-loader": "^0.2.4",
+		"style-loader": "^1.0.0",
+		"ts-loader": "^6.0.4",
+		"typescript": "^3.5.3",
+		"uglifyjs-webpack-plugin": "^2.2.0",
+		"webpack": "^4.39.1",
+		"webpack-cli": "^3.3.6",
+		"webpack-dev-server": "^3.7.2"
 	},
 	"dependencies": {
-		"axios": "^0.17.1",
+		"axios": "^0.19.0",
+		"babel-loader": "^8.0.6",
 		"html-to-react": "^1.4.1",
+		"mini-css-extract-plugin": "^0.8.0",
 		"prop-types": "^15.6.0",
 		"react": "^16.2.0",
-		"react-dom": "^16.2.0"
+		"react-dom": "^16.2.0",
+		"react-redux": "^7.1.0",
+		"redux": "^4.0.4",
+		"redux-thunk": "^2.3.0"
 	}
 }
