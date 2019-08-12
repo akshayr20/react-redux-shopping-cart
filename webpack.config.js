@@ -5,7 +5,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'summary.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'public')
     },
     module: {
@@ -38,10 +38,10 @@ module.exports = {
         ]
     },
     plugins: [
-        // new CleanWebPackPlugin([ 'public' ], { root: path.resolve(__dirname)}),
+        new CleanWebPackPlugin([ 'public' ], { root: path.resolve(__dirname)}),
         new HtmlWebPackPlugin({
             template: './src/index.html',
-            // favicon: './src/favicon.ico',
+            favicon: './src/favicon.ico',
             inject: false
         })
     ],
